@@ -1,0 +1,2 @@
+# EffectiveMobileTestTask
+Test task
