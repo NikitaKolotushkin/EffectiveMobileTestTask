@@ -290,10 +290,27 @@ class Library(object):
         print('+' + '-' * (id_w + 2), '-' * (title_w + 2), '-' * (author_w + 2), '-' * (year_w + 2), '-' * (status_w + 2), sep='+', end='+\n')
 
     def _open_file(self) -> dict:
+        """
+        Opens the library data file for reading and returns its contents.
+
+        :return: The library data as a dictionary.
+        :rtype: dict
+        """
         with open(self.filename, mode='r', encoding='utf-8') as file:
             return json.load(file)
         
     def _save_file(self, data: dict) -> None:
+        """
+        Saves the library data to a file.
+
+        This function is used to save the library data to the file given in
+        the constructor. It takes the library data as a dictionary parameter
+        and saves it to the file.
+
+        :param data: The library data to save.
+        :type data: dict
+        :return: None
+        """
         with open(self.filename, mode='w', encoding='utf-8') as file:
             json.dump(data, file, indent=4, ensure_ascii=False)
 
