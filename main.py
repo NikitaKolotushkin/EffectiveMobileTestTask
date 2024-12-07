@@ -173,7 +173,7 @@ class Library(object):
             print('Ошибка: Неверный режим поиска!')
             return
 
-        matching_books = [book for book in data if str(book[search_modes[search_mode - 1]]) == search_query]
+        matching_books = [book for book in data['books'] if str(book[search_modes[search_mode - 1]]) == search_query]
 
         if not matching_books:
             print('Книги не найдены!')
