@@ -36,15 +36,14 @@ class Book(object):
             return False
         return (self.title == other.title) and (self.author == other.author) and (self.year == other.year)
 
-    def __repr__(self) -> str:
+    def __str__(self) -> str:    
         """
-        Returns a string representation of a :class:`Book` object.
+        Returns a string representation of the book.
 
-        This function is used to return a string that represents a
-        :class:`Book` object. The string is of the form:
-        ``{id}: {title} ({author}, {year}) - {status}``.
+        This method provides a human-readable representation of the book,
+        including its ID, title, author, year, and status.
 
-        :return: A string representation of the :class:`Book` object.
+        :return: A string representation of the book.
         :rtype: str
         """
         return f'{self.id}: {self.title} ({self.author}, {self.year}) - {self.status}'
